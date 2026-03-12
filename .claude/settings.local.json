@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(npm run build)",
-      "mcp__claude_ai_Figma__get_screenshot"
+      "mcp__claude_ai_Figma__get_screenshot",
+      "Bash(npm install --save-dev vite-plugin-compression)"
     ]
   }
 }

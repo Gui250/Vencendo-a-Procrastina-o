@@ -1,0 +1,16 @@
+# robots.txt para Vencendo a Procrastinação
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://vencendoaprocrastinacao.com.br/sitemap.xml
+
+# Crawl delay (optional - helps prevent server overload)
+Crawl-delay: 1
+
+# Block specific bots (optional)
+User-agent: AhrefsBot
+Crawl-delay: 5
+
+User-agent: SemrushBot
+Crawl-delay: 5
