@@ -180,7 +180,7 @@ export default function Modules() {
 }
 
 function ModuleCard({ mod, index }: { mod: ModuleCard; index: number }) {
-  const { number, subtitle, title, items, icon, accentColor = '#ddc07f' } = mod
+  const { number, subtitle, title, items, accentColor = '#ddc07f' } = mod
   const listItems = items.slice(0, 3)
   const highlight = items[3]
   const [isHovered, setIsHovered] = useState(false)
@@ -221,23 +221,6 @@ function ModuleCard({ mod, index }: { mod: ModuleCard; index: number }) {
         <p className="font-inter font-medium text-[#2595cd] text-[18px] leading-[30px] text-center">
           {subtitle}
         </p>
-      </div>
-      <div className="flex justify-center items-center bg-[#FEFEFE] min-h-[158px] overflow-hidden">
-        <div className="flex justify-center items-center w-full h-full p-4">
-          <img
-            src={icon}
-            alt={`Ícone do módulo: ${title}`}
-            className="w-[150px] h-[150px] object-contain transition-all duration-500 ease-out"
-            style={{
-              objectPosition: 'center center',
-              display: 'block',
-              margin: '0 auto',
-              transform: isHovered ? 'scale(1.15) rotate(5deg)' : 'scale(1) rotate(0deg)',
-              filter: isHovered ? 'brightness(1.1) drop-shadow(0 4px 8px rgba(0,0,0,0.2))' : 'brightness(1)',
-            }}
-            loading="lazy"
-          />
-        </div>
       </div>
 
       {/* Body */}
