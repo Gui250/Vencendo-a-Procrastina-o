@@ -1,25 +1,33 @@
 import { imgRectangle138, imgRectangle236 } from '../assets/images'
+import imgRectangle409Mobile from '/src/assets/Rectangle 409.png'
 
 export default function Hero() {
   return (
     <section className="relative w-full min-h-[700px] overflow-hidden" aria-label="Início">
       {/* Background image */}
       <div className="absolute inset-0 w-full h-full">
+        {/* Desktop background */}
         <img
           src={imgRectangle138}
           alt="Background"
-          className="w-full h-full object-cover"
+          className="hidden md:block w-full h-full object-cover"
+        />
+        {/* Mobile background */}
+        <img
+          src={imgRectangle409Mobile}
+          alt="Background Mobile"
+          className="block md:hidden w-full h-full object-cover object-center"
         />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-[1920px] mx-auto px-6 md:px-16 lg:px-[297px] py-[91px]">
+      <div className="relative z-10 max-w-[1920px] mx-auto px-6 md:px-16 lg:px-[297px] pt-20 pb-12 md:py-[91px]">
         {/* Logo */}
-        <div className="mb-8">
+        <div className="mb-6 md:mb-8">
           <img
             src={imgRectangle236}
             alt="Vencendo a Procrastinação - Logo"
-            className="w-[392px] max-w-[70vw] h-auto object-contain"
+            className="w-[392px] max-w-[70vw] h-auto object-contain mt-48 md:mt-0"
           />
         </div>
 
@@ -30,7 +38,7 @@ export default function Hero() {
         </h1>
 
         {/* Sub-headline */}
-        <p className="font-poppins font-medium text-white text-[clamp(16px,1.4vw,24px)] leading-[27px] max-w-[772px] mb-6">
+        <p className="font-poppins font-medium text-white text-[clamp(16px,1.4vw,24px)] leading-[1.6] md:leading-[27px] max-w-[772px] mb-6">
           Junte-se a{' '}
           <span className="text-[#ebc268]">mais de 1.286 alunos</span>{' '}
           que estão transformando suas vidas! Entenda a raiz da sua procrastinação e crie uma rotina Antiprocrastinação.{' '}
@@ -38,7 +46,7 @@ export default function Hero() {
         </p>
 
         {/* CTA text */}
-        <p className="font-poppins font-medium text-white text-[clamp(16px,1.4vw,24px)] leading-[27px] max-w-[776px] mb-8">
+        <p className="font-poppins font-medium text-white text-[clamp(16px,1.4vw,24px)] leading-[1.6] md:leading-[27px] max-w-[776px] mb-8">
           Aprenda a vencer a procrastinação e finalmente{' '}
           <span className="text-[#b58d48]">fazer o que você sabe que precisa ser feito.</span>
         </p>
